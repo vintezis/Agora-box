@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap');
+
+$color0 : #EDEDED;
+$color1 : #333333;
+$color2 : #008c8cb5;
+$color3 : #fef2e0;
+$color4 : #fde4c0;
+$color5 : #fcd395;
+$color6 : #EFC041;
+$color7 : #6955da;
+$fontstack: Montserrat, Arial, sans-serif;
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box
+}
+
+
+a,
+body,
+div,
+li,
+p,
+span,
+td,
+th {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    mso-line-height-rule: exactly
+}
+
+
+body {
+    font-family: $fontstack;
+    background-color: $color0;
+    font-size: 1rem;
+}
+
+.box-grid {
+    display: flex;
+    justify-content: center;
+    max-width: 1300px;
+    min-width: 1100px;
+    gap: 1.25rem;
+    margin: auto;
+    padding: 50px;
+    background-color: white;
+}
+
+.game-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 360px;
+    height: 235px;
+    background-image: url("../img/GettyImages-1163979032.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+
+.box-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;
+    height: 50%;
+    background-color: $color2;
+    padding: 15px;
+
+    & h1 {
+        font-size: 1rem;
+        font-weight: 500;
+        color: white;
+    }
+
+    & a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: .8rem;
+        color: black;
+        background-color: $color6;
+        padding: 7px 14px;
+        border-radius: 20px;
+        transition: transform 200ms;
+    }
+
+    & a:hover {
+        background-color: #e3ee97;
+        transform: scale(105%);
+    }
+}
+
+.closed-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.closed-box:hover > .closed-text{
+    transform: scale(108%);
+}
+
+.closed-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    background-color: #EDEDED;
+    border-radius: 100px;
+    padding: 15px;
+    max-width: 65%;
+    border: 0px solid $color7;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.5);
+
+    transition: transform 300ms cubic-bezier(.89,.72,.46,1.82);
+
+
+    & p {
+        font-size: .85rem;
+        font-weight: 500;
+        color: $color7
+    }
+
+  /*   & p::before{
+        content: url(data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2060%2060%22%20xml%3Aspace%3D%22preserve%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M50.3%2C32v-2.6c0-2.5-2-4.5-4.5-4.5h-2.2v-6.5c0-7.3-5.9-13.2-13.2-13.2c-7.3%2C0-13.2%2C5.9-13.2%2C13.2v6.5H15c-2.5%2C0-4.5%2C2-4.5%2C4.5v22.7c0%2C2.5%2C2%2C4.5%2C4.5%2C4.5h30.9c2.5%2C0%2C4.5-2%2C4.5-4.5v-3h-2.4V45h2.4v-2.4h-2.4v-4.1h2.4v-2.4h-2.4V32H50.3zM22.2%2C18.4c0-4.5%2C3.7-8.2%2C8.2-8.2c4.5%2C0%2C8.2%2C3.7%2C8.2%2C8.2v6.5H22.2V18.4z%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fsvg%3E);
+        width: 30px;
+    } */
+
+    .icon {
+        height: 100%;
+        fill: $color7;
+    }
+}
+
+.closed-box-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.7);
+    background-image: url(../img/pat.jpg);
+    background-size: 10px;
+    background-position: center center;
+    background-blend-mode: saturation;
+    opacity: .5;
+}
+
+@supports (-webkit-backdrop-filter: blur(3px)) or (backdrop-filter: blur(3px)) {
+    .closed-box {
+      -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
+      border-radius: 5px;
+      overflow: hidden;
+      }
+    }
